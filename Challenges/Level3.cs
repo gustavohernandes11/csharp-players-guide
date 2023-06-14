@@ -1,6 +1,6 @@
-namespace csharp_players_guide.Challenges.Level3
+namespace csharp_players_guide.Challenges
 {
-    public class Character
+    public class Level3
     {
         // 50xp
         public static void SayHelloWorld()
@@ -21,6 +21,7 @@ namespace csharp_players_guide.Challenges.Level3
             Console.WriteLine("How long was I unconscious?");
             Console.WriteLine("My head hurts!");
         }
+        // 50px
         public static void MakeAndDeliverBread()
         {
             Console.WriteLine("Bread is ready.");

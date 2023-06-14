@@ -1,10 +1,11 @@
-﻿using csharp_players_guide.Challenges.Level3;
-using csharp_players_guide.Challenges.Level4;
+﻿using csharp_players_guide.Challenges;
 
 
-// Character.SayHelloWorld();
-// Character.SayAnythingElse();
-// Character.SayFiveStatements();
-// Character.MakeAndDeliverBread();
+// Level3.SayHelloWorld();
+// Level3.SayAnythingElse();
+// Level3.SayFiveStatements();
+// Level3.MakeAndDeliverBread();
 
-// Comments.TheThingNamer3000();
+// Level4.TheThingNamer3000();
+// Level5.TheVariableShop();
+Level5.TheVariableShopReturns();

@@ -1,6 +1,6 @@
-namespace csharp_players_guide.Challenges.Level4
+namespace csharp_players_guide.Challenges
 {
-    public class Comments
+    public class Level4
     {
         // 100xp
         public static void TheThingNamer3000()
