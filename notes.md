@@ -32,3 +32,12 @@ For a hexadecimal literal, you start your number with 0x:
 
 If you know the hexadecimal Unicode number for a symbol and would prefer to use that, you can write that out after a \u:
 `char aLetter = '\u0061'; // An 'a'`
+
+# Math
+
+```
+int x;
+x = 5; int y = ++x;
+x = 5; int z = x++;
+
+```

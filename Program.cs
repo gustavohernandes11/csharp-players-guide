@@ -8,4 +8,9 @@
 
 // Level4.TheThingNamer3000();
 // Level5.TheVariableShop();
-Level5.TheVariableShopReturns();
+// Level5.TheVariableShopReturns();
+// Level6.TestingConvert();
+// Level6.TheTriangleFarmer();
+// Level6.TheFourSistersandtheDuckbear();
+// Level6.TheDominionofKings();
+
