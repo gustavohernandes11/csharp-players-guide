@@ -13,4 +13,5 @@
 // Level6.TheTriangleFarmer();
 // Level6.TheFourSistersandtheDuckbear();
 // Level6.TheDominionofKings();
+Level7.TheDefenseofConsolas();
 
