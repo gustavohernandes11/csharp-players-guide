@@ -15,5 +15,7 @@
 // Level6.TheDominionofKings();
 // Level7.TheDefenseofConsolas();
 // Level9.RepairingTheClocktower();
-Level9.Watchtower();
-
+// Level9.Watchtower();
+Level10.BuyingInventory();
+Level10.GetUserName();
+Level10.BuyingInventory();
