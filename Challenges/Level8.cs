@@ -47,13 +47,13 @@ namespace csharp_players_guide.Challenges
 
             Console.WriteLine("Deploy to: ");
             Console.WriteLine(deployDefense1.ToString());
-            Console.Beep();
+            // Console.Beep();
             Console.WriteLine(deployDefense2.ToString());
-            Console.Beep();
+            // Console.Beep();
             Console.WriteLine(deployDefense3.ToString());
-            Console.Beep();
+            // Console.Beep();
             Console.WriteLine(deployDefense4.ToString());
-            Console.Beep(900, 1000);
+            // Console.Beep(900, 1000);
 
             Console.BackgroundColor = ConsoleColor.Black;
         }
