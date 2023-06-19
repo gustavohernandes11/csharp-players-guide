@@ -36,5 +36,32 @@ namespace csharp_players_guide.Challenges
             };
 
         }
+        private static bool IsDivisibleBy(int divisor, int dividend) => divisor % dividend == 0;
+        public static void TheMagicCannon(int rounds)
+        {
+            for (int index = 1; index <= rounds; index++)
+            {
+                if (IsDivisibleBy(index, 5) && IsDivisibleBy(index, 3))
+                {
+                    Console.WriteLine($"{index}: Electric and Fire");
+                    continue;
+                }
+                else if (IsDivisibleBy(index, 5))
+                {
+                    Console.WriteLine($"{index}: Electric");
+                    continue;
+                }
+                else if (IsDivisibleBy(index, 3))
+                {
+                    Console.WriteLine($"{index}: Fire");
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine($"{index}: Normal");
+                    continue;
+                }
+            }
+        }
     }
 }
