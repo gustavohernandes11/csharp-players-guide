@@ -11,11 +11,7 @@ public static class HuntingTheManticore
     static int actualCannonDamage;
     static bool isGameRunning;
 
-    static Thread soundThread = new Thread(SoundThread);
-    static void SoundThread()
-    {
-        SoundEffect.Soundtrack();
-    }
+
 
     public static void Init()
     {
@@ -31,7 +27,7 @@ public static class HuntingTheManticore
 
         int manticoreDistance = Level13.AskForNumber("Player 1, how far away from the city do you want to station the Manticore (0 to 100)? ", 0, 100);
 
-        soundThread.Start();
+        SoundEffect.Soundtrack(isGameRunning);
 
         Console.WriteLine("Player 2, it is your turn.");
         Console.WriteLine("-----------------------------------------------------------");
@@ -73,7 +69,7 @@ public static class HuntingTheManticore
                         break;
 
                     case 1:
-                        SoundEffect.Explosion();
+                        SoundEffect.NormalDamage();
                         break;
 
 
