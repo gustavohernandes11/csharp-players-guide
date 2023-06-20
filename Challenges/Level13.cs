@@ -2,10 +2,10 @@ using System.Text.RegularExpressions;
 
 namespace csharp_players_guide.Challenges
 {
-    public class Level13
+    public static class Level13
     {
         // 100xp
-        public int AskForNumber(string text)
+        public static int AskForNumber(string text, int minRange = int.MinValue, int maxRange = int.MaxValue)
         {
             while (true)
             {
@@ -15,14 +15,16 @@ namespace csharp_players_guide.Challenges
                 if (!String.IsNullOrEmpty(input) && Regex.IsMatch(input, @"^\d+$"))
                 {
                     int number = Convert.ToInt32(input);
-                    // Console.WriteLine(number);
-                    return number;
+                    if (number > minRange && number < maxRange)
+                    {
+                        return number;
+                    }
                 }
 
             }
         }
         // 100xp
-        public void Countdown(int numberToBeDecreased)
+        public static void Countdown(int numberToBeDecreased)
         {
             for (int i = numberToBeDecreased; i >= 0; i--)
             {
