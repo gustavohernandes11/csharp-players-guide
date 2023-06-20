@@ -39,22 +39,10 @@ public static class Level17
 
         Console.WriteLine($"{meal.Seasoning} {meal.MainIngredient} {meal.FoodType}!");
     }
-    private static string GetFoodType()
-    {
-        string userInput = Helper.AskForString("Which food type? (soup, stew, gumbo)");
-        return userInput;
-    }
-    private static string GetSeasoning()
-    {
-        string userInput = Helper.AskForString("Which seasoning? (spicy, salty, sweet)");
-        return userInput;
-    }
-    private static string GetMainIngredient()
-    {
-        string userInput = Helper.AskForString("Which main ingredient? (mushrooms, chicken, carrots, potatoes)");
-        return userInput;
-    }
-
-
+    private static string GetFoodType() => Helper.AskForString("Which food type? (soup, stew, gumbo)");
+    private static string GetSeasoning() => Helper.AskForString("Which seasoning? (spicy, salty, sweet)");
+    private static string GetMainIngredient() => Helper.AskForString("Which main ingredient? (mushrooms, chicken, carrots, potatoes)");
 }
+
+
 
