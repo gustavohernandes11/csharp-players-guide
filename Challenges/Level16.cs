@@ -13,7 +13,7 @@ namespace csharp_players_guide.Challenges
 
             while (true)
             {
-                string userChoice = GetInput.AskForString(GetMessage());
+                string userChoice = Helper.AskForString(GetMessage());
                 HandleUserChoice(userChoice);
             }
 

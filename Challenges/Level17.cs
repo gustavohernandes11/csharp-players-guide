@@ -41,17 +41,17 @@ public static class Level17
     }
     private static string GetFoodType()
     {
-        string userInput = GetInput.AskForString("Which food type? (soup, stew, gumbo)");
+        string userInput = Helper.AskForString("Which food type? (soup, stew, gumbo)");
         return userInput;
     }
     private static string GetSeasoning()
     {
-        string userInput = GetInput.AskForString("Which seasoning? (spicy, salty, sweet)");
+        string userInput = Helper.AskForString("Which seasoning? (spicy, salty, sweet)");
         return userInput;
     }
     private static string GetMainIngredient()
     {
-        string userInput = GetInput.AskForString("Which main ingredient? (mushrooms, chicken, carrots, potatoes)");
+        string userInput = Helper.AskForString("Which main ingredient? (mushrooms, chicken, carrots, potatoes)");
         return userInput;
     }
 

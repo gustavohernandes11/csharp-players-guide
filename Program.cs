@@ -29,4 +29,7 @@
 // levelExemple.Countdown(100);
 // int numberFromUser = levelExemple.AskForNumber("Digite um número: ");
 
-HuntingTheManticore.Init();
+// HuntingTheManticore.Init();
+
+// Level16.SimulasTest();
+Level17.SimulasSoup();
