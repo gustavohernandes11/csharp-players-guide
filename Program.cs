@@ -22,8 +22,11 @@
 // Level10.BuyingInventory();
 
 // Level11.GuessTheNumber();
+// Level11.TheMagicCannon(30);
 
-Level13 levelExemple = new Level13();
+// Level13 levelExemple = new Level13();
 
-levelExemple.Countdown(100);
-// levelExemple.AskForNumber("Digite um número;");
+// levelExemple.Countdown(100);
+// int numberFromUser = levelExemple.AskForNumber("Digite um número: ");
+
+HuntingTheManticore.Init();
