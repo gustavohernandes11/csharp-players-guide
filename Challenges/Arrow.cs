@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    // 100xp + 50xp + 1000xp
+    // 100xp + 50xp + 100xp + 100xp
     public class Arrow
     {
         private const double arrowHeadSteelPrice = 10;
@@ -21,6 +21,10 @@ namespace csharp_players_guide.Challenges
         public int Length { get; set; }
 
         public double TotalPrice { get; private set; }
+
+        public static Arrow CreateEliteArrow => new Arrow(ArrowHeadOptions.Steel, FletchingTypeOptions.Plastic, 95);
+        public static Arrow CreateBeginnerArrow => new Arrow(ArrowHeadOptions.Wood, FletchingTypeOptions.GooseFeathers, 75);
+        public static Arrow CreateMarksmanArrow => new Arrow(ArrowHeadOptions.Steel, FletchingTypeOptions.GooseFeathers, 65);
 
         public Arrow(ArrowHeadOptions arrowHead, FletchingTypeOptions fletchingType, int length)
         {
