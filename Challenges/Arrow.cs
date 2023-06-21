@@ -1,5 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
+    // 100xp + 50xp
     public class Arrow
     {
         private const double arrowHeadSteelPrice = 10;
@@ -19,7 +20,7 @@ namespace csharp_players_guide.Challenges
         private FletchingType fletchingType;
         private int length;
 
-        public double TotalPrice { get; private set; }
+        private double totalPrice;
 
         public Arrow(ArrowHead arrowHead, FletchingType fletchingType, int length)
         {
@@ -32,7 +33,7 @@ namespace csharp_players_guide.Challenges
             this.fletchingType = fletchingType;
             this.length = length;
 
-            TotalPrice = CalculateTotalPrice();
+            totalPrice = CalculateTotalPrice();
 
         }
 
@@ -69,6 +70,11 @@ namespace csharp_players_guide.Challenges
         }
 
         private double GetLengthPrice() => this.length * 0.05;
+
+        public double GetLength() => this.length;
+        public ArrowHead GetArrowHead() => this.arrowHead;
+        public FletchingType GetFletchingType() => this.fletchingType;
+        public double GetTotalPrice() => this.totalPrice;
     }
     public enum ArrowHead { Steel, Wood, Obsidian };
     public enum FletchingType { Plastic, TurkeyFeathers, GooseFeathers };

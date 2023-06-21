@@ -38,6 +38,10 @@ Arrow arrow1 = new Arrow(ArrowHead.Wood, FletchingType.TurkeyFeathers, 70);
 Arrow arrow2 = new Arrow(ArrowHead.Obsidian, FletchingType.Plastic, 80);
 Arrow arrow3 = new Arrow(ArrowHead.Steel, FletchingType.GooseFeathers, 60);
 
-Console.WriteLine(arrow1.TotalPrice);
-Console.WriteLine(arrow2.TotalPrice);
-Console.WriteLine(arrow3.TotalPrice);
+Console.WriteLine(arrow1.GetTotalPrice());
+Console.WriteLine(arrow2.GetTotalPrice());
+Console.WriteLine(arrow3.GetTotalPrice());
+
+Console.WriteLine(arrow3.GetLength());
+Console.WriteLine(arrow3.GetArrowHead());
+Console.WriteLine(arrow3.GetFletchingType());
