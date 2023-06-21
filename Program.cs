@@ -34,14 +34,23 @@
 // Level16.SimulasTest();
 // Level17.SimulasSoup();
 
-Arrow arrow1 = new Arrow(ArrowHead.Wood, FletchingType.TurkeyFeathers, 70);
-Arrow arrow2 = new Arrow(ArrowHead.Obsidian, FletchingType.Plastic, 80);
-Arrow arrow3 = new Arrow(ArrowHead.Steel, FletchingType.GooseFeathers, 60);
+using static csharp_players_guide.Challenges.Arrow;
 
-Console.WriteLine(arrow1.GetTotalPrice());
-Console.WriteLine(arrow2.GetTotalPrice());
-Console.WriteLine(arrow3.GetTotalPrice());
+Arrow arrow1 = new Arrow(ArrowHeadOptions.Wood, FletchingTypeOptions.TurkeyFeathers, 70);
+Arrow arrow2 = new Arrow(ArrowHeadOptions.Obsidian, FletchingTypeOptions.Plastic, 80);
+Arrow arrow3 = new Arrow(ArrowHeadOptions.Steel, FletchingTypeOptions.GooseFeathers, 60);
 
-Console.WriteLine(arrow3.GetLength());
-Console.WriteLine(arrow3.GetArrowHead());
-Console.WriteLine(arrow3.GetFletchingType());
+Console.WriteLine(arrow1.TotalPrice);
+Console.WriteLine(arrow2.TotalPrice);
+Console.WriteLine(arrow3.TotalPrice);
+
+Console.WriteLine(arrow3.Length);
+Console.WriteLine(arrow3.ArrowHead);
+Console.WriteLine(arrow3.FletchingType);
+
+
+// Level20 testingGetOnly = new(10, 10);
+// Console.WriteLine(testingGetOnly.Area);
+
+// testingGetOnly.Height = 200;
+// Console.WriteLine(testingGetOnly.Area);

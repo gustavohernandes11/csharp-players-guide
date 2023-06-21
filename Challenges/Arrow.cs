@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    // 100xp + 50xp
+    // 100xp + 50xp + 1000xp
     public class Arrow
     {
         private const double arrowHeadSteelPrice = 10;
@@ -16,67 +16,63 @@ namespace csharp_players_guide.Challenges
         private const double lengthPriceMultiplier = 0.05;
 
 
-        private ArrowHead arrowHead;
-        private FletchingType fletchingType;
-        private int length;
+        public ArrowHeadOptions ArrowHead { get; set; }
+        public FletchingTypeOptions FletchingType { get; set; }
+        public int Length { get; set; }
 
-        private double totalPrice;
+        public double TotalPrice { get; private set; }
 
-        public Arrow(ArrowHead arrowHead, FletchingType fletchingType, int length)
+        public Arrow(ArrowHeadOptions arrowHead, FletchingTypeOptions fletchingType, int length)
         {
             if (length > arrowMaxLength || length < arrowMinLength)
             {
                 throw new OutOfRangeException("Arrows should be 60 to 100 cm long.");
             }
 
-            this.arrowHead = arrowHead;
-            this.fletchingType = fletchingType;
-            this.length = length;
+            ArrowHead = arrowHead;
+            FletchingType = fletchingType;
+            Length = length;
 
-            totalPrice = CalculateTotalPrice();
+            TotalPrice = CalculateTotalPrice();
 
         }
 
         private double CalculateTotalPrice()
         {
-            double arrowHeadPrice = GetArrowHeadPrice();
-            double fletchingTypePrice = GetFletchingTypePrice();
-            double lengthPrice = GetLengthPrice();
+            double arrowHeadPrice = CalculateArrowHeadPrice();
+            double fletchingTypePrice = CalculateFletchingTypePrice();
+            double lengthPrice = CalculateLengthPrice();
 
             return arrowHeadPrice + fletchingTypePrice + lengthPrice;
         }
 
-        private double GetArrowHeadPrice()
+        private double CalculateArrowHeadPrice()
         {
-            return this.arrowHead switch
+            return ArrowHead switch
             {
-                ArrowHead.Steel => arrowHeadSteelPrice,
-                ArrowHead.Wood => arrowHeadWoodPrice,
-                ArrowHead.Obsidian => arrowHeadObsidianPrice,
+                ArrowHeadOptions.Steel => arrowHeadSteelPrice,
+                ArrowHeadOptions.Wood => arrowHeadWoodPrice,
+                ArrowHeadOptions.Obsidian => arrowHeadObsidianPrice,
                 _ => 0,
             };
         }
 
-        private double GetFletchingTypePrice()
+        private double CalculateFletchingTypePrice()
         {
-            return this.fletchingType switch
+            return FletchingType switch
             {
-                FletchingType.Plastic => fletchingTypePlasticPrice,
-                FletchingType.TurkeyFeathers => fletchingTypeTurkeyFeathersPrice,
-                FletchingType.GooseFeathers => fletchingTypeGooseFeathersPrice,
+                FletchingTypeOptions.Plastic => fletchingTypePlasticPrice,
+                FletchingTypeOptions.TurkeyFeathers => fletchingTypeTurkeyFeathersPrice,
+                FletchingTypeOptions.GooseFeathers => fletchingTypeGooseFeathersPrice,
                 _ => 0,
             };
 
         }
 
-        private double GetLengthPrice() => this.length * 0.05;
+        private double CalculateLengthPrice() => Length * 0.05;
 
-        public double GetLength() => this.length;
-        public ArrowHead GetArrowHead() => this.arrowHead;
-        public FletchingType GetFletchingType() => this.fletchingType;
-        public double GetTotalPrice() => this.totalPrice;
+        public enum ArrowHeadOptions { Steel, Wood, Obsidian };
+        public enum FletchingTypeOptions { Plastic, TurkeyFeathers, GooseFeathers };
     }
-    public enum ArrowHead { Steel, Wood, Obsidian };
-    public enum FletchingType { Plastic, TurkeyFeathers, GooseFeathers };
 }
 
