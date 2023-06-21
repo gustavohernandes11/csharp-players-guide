@@ -41,14 +41,10 @@ namespace csharp_players_guide.Challenges
 
         }
 
-        private double CalculateTotalPrice()
-        {
-            double arrowHeadPrice = CalculateArrowHeadPrice();
-            double fletchingTypePrice = CalculateFletchingTypePrice();
-            double lengthPrice = CalculateLengthPrice();
-
-            return arrowHeadPrice + fletchingTypePrice + lengthPrice;
-        }
+        private double CalculateTotalPrice() =>
+            CalculateArrowHeadPrice() +
+            CalculateFletchingTypePrice() +
+            CalculateLengthPrice();
 
         private double CalculateArrowHeadPrice()
         {
