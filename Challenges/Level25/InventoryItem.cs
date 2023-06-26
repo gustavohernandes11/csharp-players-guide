@@ -11,68 +11,37 @@ public abstract class InventoryItem
         Weight = weight;
         Volume = volume;
     }
-
 }
 public class ArrowItem : InventoryItem
 {
-    public ArrowItem() : base(0.1, 0.05)
-    {
+    public ArrowItem() : base(0.1, 0.05) { }
+    public override string ToString() => "ArrowItem";
 
-    }
-    public override string ToString()
-    {
-        return "ArrowItem";
-    }
 }
 public class Bow : InventoryItem
 {
     public Bow() : base(1, 4) { }
-    public override string ToString()
-    {
-        return "Bow";
-    }
-
-
+    public override string ToString() => "Bow";
 }
 public class Rope : InventoryItem
 {
     public Rope() : base(1, 1.5) { }
-    public override string ToString()
-    {
-        return "Rope";
-    }
-
-
+    public override string ToString() => "Rope";
 }
 public class Water : InventoryItem
 {
     public Water() : base(2, 3) { }
-    public override string ToString()
-    {
-        return "Water";
-    }
-
-
+    public override string ToString() => "Water";
 }
 public class FoodRations : InventoryItem
 {
     public FoodRations() : base(1, 0.5) { }
-    public override string ToString()
-    {
-        return "FoodRations";
-    }
-
-
+    public override string ToString() => "FoodRations";
 }
 public class Sword : InventoryItem
 {
     public Sword() : base(5, 3) { }
-    public override string ToString()
-    {
-        return "Sword";
-    }
-
-
+    public override string ToString() => "Sword";
 }
 
 

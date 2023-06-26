@@ -25,14 +25,15 @@ public class Pack
     }
     public new string ToString()
     {
-        string invetoryItems = "The pack is containing";
+        string invetoryItemsString = "The pack is containing";
+        if (ItemsAmount == 0) return invetoryItemsString + " nothing.";
 
         for (int i = 0; i < ItemsAmount; i++)
         {
-            invetoryItems = $"{invetoryItems} {Items[i].ToString()},";
+            invetoryItemsString = $"{invetoryItemsString} {Items[i].ToString()},";
         }
 
-        return invetoryItems;
+        return invetoryItemsString;
     }
     public void DisplayStatus()
     {
@@ -77,24 +78,15 @@ public class Pack
 
 public class SmallPack : Pack
 {
-    public SmallPack() : base(5, 2, 5)
-    {
-
-    }
+    public SmallPack() : base(5, 2, 5) { }
 }
 public class MediumPack : Pack
 {
-    public MediumPack() : base(10, 8, 10)
-    {
-
-    }
+    public MediumPack() : base(10, 8, 10) { }
 }
 public class BigPack : Pack
 {
-    public BigPack() : base(15, 12, 14)
-    {
-
-    }
+    public BigPack() : base(15, 12, 14) { }
 }
 
 
