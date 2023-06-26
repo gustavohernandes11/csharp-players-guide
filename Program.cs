@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using csharp_players_guide.Challenges;
 using csharp_players_guide.Challenges.Level24;
+using csharp_players_guide.Challenges.Level25;
 using csharp_players_guide.lib;
 using static csharp_players_guide.Challenges.Arrow;
 
@@ -144,7 +145,22 @@ using static csharp_players_guide.Challenges.Arrow;
 // }
 
 
-RockPaperScissorsGame game = new RockPaperScissorsGame();
+// RockPaperScissorsGame game = new RockPaperScissorsGame();
+
+
+MediumPack myBackPack = new MediumPack();
+
+Console.WriteLine(myBackPack.Add(new ArrowItem()));
+// myBackPack.DisplayStatus();
+Console.WriteLine(myBackPack.Add(new Sword()));
+Console.WriteLine(myBackPack.Add(new Bow()));
+Console.WriteLine(myBackPack.Add(new Water()));
+Console.WriteLine(myBackPack.Add(new FoodRations()));
+Console.WriteLine(myBackPack.Add(new ArrowItem()));
+myBackPack.DisplayStatus();
+Console.WriteLine(myBackPack.ToString());
+
+Console.WriteLine(new ArrowItem().ToString());
 
 
 
