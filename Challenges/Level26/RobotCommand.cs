@@ -1,59 +1,59 @@
 namespace csharp_players_guide.Challenges.Level26;
 
-public abstract class RobotCommand
+interface IRobotCommand
 {
-    internal abstract void Run(Robot robot);
+    void Run(Robot robot);
 }
 
-public class OnCommand : RobotCommand
+public class OnCommand : IRobotCommand
 {
-    internal override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         robot.IsPowered = true;
     }
 }
 
-public class OffCommand : RobotCommand
+public class OffCommand : IRobotCommand
 {
-    internal override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         robot.IsPowered = false;
     }
 }
 
-public class NorthCommand : RobotCommand
+public class NorthCommand : IRobotCommand
 {
-    internal override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         if (robot.IsPowered)
             robot.Y++;
     }
 }
 
-public class SouthCommand : RobotCommand
+public class SouthCommand : IRobotCommand
 {
-    internal override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         if (robot.IsPowered)
             robot.Y--;
     }
 }
 
-public class WestCommand : RobotCommand
+public class WestCommand : IRobotCommand
 {
-    internal override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         if (robot.IsPowered)
             robot.X--;
     }
 }
 
-public class EastCommand : RobotCommand
+public class EastCommand : IRobotCommand
 {
-    internal override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         if (robot.IsPowered)
-            robot.Y++;
+            robot.X++;
     }
 }
 
