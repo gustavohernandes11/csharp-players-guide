@@ -25,7 +25,7 @@ public static class HuntingTheManticore
 
 
 
-        int manticoreDistance = Level13.AskForNumber("Player 1, how far away from the city do you want to station the Manticore (0 to 100)? ", 0, 100);
+        int manticoreDistance = Helper.AskForNumber("Player 1, how far away from the city do you want to station the Manticore (0 to 100)? ", 0, 100);
 
         SoundEffect.Soundtrack(isGameRunning);
 
@@ -45,7 +45,7 @@ public static class HuntingTheManticore
 
             Console.WriteLine($"STATUS: Round: {round} City: {cityHealth}/{cityTotalHealth} Manticore: {manticoreHealth}/{manticoreTotalHealth}");
             Console.WriteLine($"The cannon is expected to deal {actualCannonDamage} damage this round.");
-            int cannonRange = Level13.AskForNumber("Enter desired cannon range (0 to 100)? ", 0, 100);
+            int cannonRange = Helper.AskForNumber("Enter desired cannon range (0 to 100)? ", 0, 100);
 
             return cannonRange;
 

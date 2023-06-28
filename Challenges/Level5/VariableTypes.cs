@@ -1,11 +1,10 @@
 
 namespace csharp_players_guide.Challenges
 {
-    public class Level5
+    public class VariableTypes
     {
         public static void TheVariableShop()
         {
-
             byte singleByte = 128;
             short smallNumber = 50;
             int integer = 10_000;

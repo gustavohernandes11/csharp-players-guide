@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    public class Level7
+    public class CustomConsole
     {
         private class Point
         {
@@ -28,20 +28,17 @@ namespace csharp_players_guide.Challenges
             Console.WriteLine("Target Row? ");
             string? targetRowString = Console.ReadLine();
 
-            int targetRow;
-            Int32.TryParse(targetRowString, out targetRow);
+            _ = int.TryParse(targetRowString, out int targetRow);
 
             Console.WriteLine("Target Column? ");
             string? targetColumnString = Console.ReadLine();
 
-            int targetColumn;
-            Int32.TryParse(targetColumnString, out targetColumn);
+            _ = int.TryParse(targetColumnString, out int targetColumn);
 
-
-            Point deployDefense1 = new Point(targetRow - 1, targetColumn);
-            Point deployDefense2 = new Point(targetRow, targetColumn - 1);
-            Point deployDefense3 = new Point(targetRow + 1, targetColumn);
-            Point deployDefense4 = new Point(targetRow, targetColumn + 1);
+            Point deployDefense1 = new(targetRow - 1, targetColumn);
+            Point deployDefense2 = new(targetRow, targetColumn - 1);
+            Point deployDefense3 = new(targetRow + 1, targetColumn);
+            Point deployDefense4 = new(targetRow, targetColumn + 1);
 
             Console.BackgroundColor = ConsoleColor.Cyan;
 

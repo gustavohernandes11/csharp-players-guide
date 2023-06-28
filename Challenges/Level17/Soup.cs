@@ -2,7 +2,7 @@ using csharp_players_guide.lib;
 
 namespace csharp_players_guide.Challenges;
 
-public static class Level17
+public static class Soup
 {
     enum FoodType { Soup, Stew, Gumbo };
     enum MainIngredient { Mushrooms, Chicken, Carrots, Potatoes };

@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    public class Level4
+    public class StringInterpolation
     {
         // 100xp
         public static void TheThingNamer3000()

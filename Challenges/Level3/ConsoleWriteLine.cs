@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    public class Level3
+    public class ConsoleWriteLine
     {
         // 50xp
         public static void SayHelloWorld()

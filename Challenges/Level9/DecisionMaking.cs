@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    public class Level9
+    public class DecisionMaking
     {
         // 100xp
         public static void RepairingTheClocktower()
@@ -8,15 +8,14 @@ namespace csharp_players_guide.Challenges
 
             Console.WriteLine("Choose a number: ");
             string? userNumberInput = Console.ReadLine();
-            int userNumber;
 
-            Int32.TryParse(userNumberInput, out userNumber);
+            _ = int.TryParse(userNumberInput, out int userNumber);
 
-            if (Int32.IsEvenInteger(userNumber))
+            if (int.IsEvenInteger(userNumber))
             {
                 Console.WriteLine("Tick");
             }
-            else if (Int32.IsOddInteger(userNumber))
+            else if (int.IsOddInteger(userNumber))
             {
                 Console.WriteLine("Tock");
             }
@@ -26,14 +25,12 @@ namespace csharp_players_guide.Challenges
         {
             Console.WriteLine("What is the X coordinate of the enemy? ");
             string? XCoordinateInput = Console.ReadLine();
-            int XCoordinate;
-            Int32.TryParse(XCoordinateInput, out XCoordinate);
+            _ = int.TryParse(XCoordinateInput, out int XCoordinate);
 
 
             Console.WriteLine("What is the Y coordinate of the enemy? ");
             string? YCoordinateInput = Console.ReadLine();
-            int YCoordinate;
-            Int32.TryParse(YCoordinateInput, out YCoordinate);
+            _ = int.TryParse(YCoordinateInput, out int YCoordinate);
 
             // Mandatory use of if statements in the exercise
             if (XCoordinate < 0 && YCoordinate > 0)
@@ -56,10 +53,6 @@ namespace csharp_players_guide.Challenges
                 Console.WriteLine("The enemy location is S");
             if (XCoordinate > 0 && YCoordinate < 0)
                 Console.WriteLine("The enemy location is SE");
-
-
-
         }
-
     }
 }

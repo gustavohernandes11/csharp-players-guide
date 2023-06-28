@@ -2,6 +2,9 @@
 using csharp_players_guide.Challenges;
 using csharp_players_guide.Challenges.Level24;
 using csharp_players_guide.Challenges.Level25;
+using csharp_players_guide.Challenges.Level26;
+using csharp_players_guide.Challenges.Level27;
+using csharp_players_guide.Challenges.Level28;
 using csharp_players_guide.lib;
 using static csharp_players_guide.Challenges.Arrow;
 
@@ -148,19 +151,36 @@ using static csharp_players_guide.Challenges.Arrow;
 // RockPaperScissorsGame game = new RockPaperScissorsGame();
 
 
-MediumPack myBackPack = new MediumPack();
+// MediumPack myBackPack = new MediumPack();
 
-Console.WriteLine(myBackPack.Add(new ArrowItem()));
+// Console.WriteLine(myBackPack.Add(new ArrowItem()));
 // myBackPack.DisplayStatus();
-Console.WriteLine(myBackPack.Add(new Sword()));
-Console.WriteLine(myBackPack.Add(new Bow()));
-Console.WriteLine(myBackPack.Add(new Water()));
-Console.WriteLine(myBackPack.Add(new FoodRations()));
-Console.WriteLine(myBackPack.Add(new ArrowItem()));
-myBackPack.DisplayStatus();
-Console.WriteLine(myBackPack.ToString());
+// Console.WriteLine(myBackPack.Add(new Sword()));
+// Console.WriteLine(myBackPack.Add(new Bow()));
+// Console.WriteLine(myBackPack.Add(new Water()));
+// Console.WriteLine(myBackPack.Add(new FoodRations()));
+// Console.WriteLine(myBackPack.Add(new ArrowItem()));
+// myBackPack.DisplayStatus();
+// Console.WriteLine(myBackPack.ToString());
 
-Console.WriteLine(new ArrowItem().ToString());
+// Console.WriteLine(new ArrowItem().ToString());
 
 
+// Robot robot1 = new Robot();
+// robot1.Init();
 
+
+// Coordinate coord1 = new Coordinate(1, 2);
+// Coordinate coord2 = new Coordinate(2, 2);
+// Coordinate coord3 = new Coordinate(3, 4);
+// Console.WriteLine(coord1.IsAdjacent(coord2));
+// Console.WriteLine(coord2.IsAdjacent(coord3));
+
+
+// Sword original = new(Material.Iron, null, 1, 0.2f);
+// Sword woodVersion = original with { SwordMaterial = Material.Wood };
+// Sword woodVersionWithGem = woodVersion with { SwordGemstone = Gemstone.Emerald };
+
+// Console.WriteLine(original.ToString());
+// Console.WriteLine(woodVersion.ToString());
+// Console.WriteLine(woodVersionWithGem.ToString());

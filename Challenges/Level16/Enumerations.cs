@@ -2,7 +2,7 @@ using csharp_players_guide.lib;
 
 namespace csharp_players_guide.Challenges
 {
-    public class Level16
+    public class Enumerations
     {
         private static BoxState currentBoxState = BoxState.Open;
 

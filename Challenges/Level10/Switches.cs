@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    public class Level10
+    public class Switches
     {
         private static string userName = "undefined";
 

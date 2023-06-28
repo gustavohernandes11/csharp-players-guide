@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    public class Level20
+    public class Square
     {
 
         public float Width { get; set; }
@@ -9,7 +9,7 @@ namespace csharp_players_guide.Challenges
         //get-only
         public float Area => Width * Height;
 
-        public Level20(float height, float width)
+        public Square(float height, float width)
         {
             Width = width;
             Height = height;

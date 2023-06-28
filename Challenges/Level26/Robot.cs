@@ -28,7 +28,8 @@ public class Robot
 
         Run();
     }
-    IRobotCommand GetCommand(string inputCommand)
+
+    static IRobotCommand GetCommand(string inputCommand)
     {
         return inputCommand switch
         {

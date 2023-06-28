@@ -1,6 +1,6 @@
 namespace csharp_players_guide.Challenges
 {
-    public class Level6
+    public class Converting
     {
         public static void TestingConvert()
         {
@@ -25,15 +25,15 @@ namespace csharp_players_guide.Challenges
             Console.WriteLine("Height of the triangle: ");
             string? TriangleHeight = Console.ReadLine();
 
-            Console.WriteLine(calculateTriangleArea(
+            Console.WriteLine(CalculateTriangleArea(
                     Convert.ToDouble(TriangleBase),
                     Convert.ToDouble(TriangleHeight)
                     ));
         }
-        private static double? calculateTriangleArea(double? TriangleBase, double? TriangleHeight)
+        private static double? CalculateTriangleArea(double? TriangleBase, double? TriangleHeight)
         {
 
-            return (TriangleBase * TriangleHeight) / 2;
+            return TriangleBase * TriangleHeight / 2;
         }
         // 100xp
         public static void TheFourSistersandtheDuckbear()
@@ -44,26 +44,20 @@ namespace csharp_players_guide.Challenges
             int remainEggs = Convert.ToInt32(totalEggs) % 4;
 
             Console.WriteLine("Each sister will get " + dividedEggs + ". And remains " + remainEggs + " eggs.");
-
         }
         public static void TheDominionofKings()
         {
             Console.WriteLine("How many estates?: ");
             string? estatesAmountString = Console.ReadLine();
-            int estatesAmount;
-            Int32.TryParse(estatesAmountString, out estatesAmount);
+            _ = int.TryParse(estatesAmountString, out int estatesAmount);
 
             Console.WriteLine("How many duchies?: ");
             string? duchyAmountString = Console.ReadLine();
-            int duchyAmount;
-            Int32.TryParse(duchyAmountString, out duchyAmount);
+            _ = int.TryParse(duchyAmountString, out int duchyAmount);
 
             Console.WriteLine("How many provinces?: ");
             string? provincesAmountString = Console.ReadLine();
-            int provincesAmount;
-            Int32.TryParse(provincesAmountString, out provincesAmount);
-
-
+            _ = int.TryParse(provincesAmountString, out int provincesAmount);
 
             int estateUnitValue = 1;
             int duchyUnitValue = 3;

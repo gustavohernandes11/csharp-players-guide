@@ -1,13 +1,12 @@
 namespace csharp_players_guide.Challenges
 {
-    public static class Level11
+    public static class Loops
     {
         public static void GuessTheNumber()
         {
             Console.WriteLine("User 1, enter a number between 0 and 100: ");
             string? numberToBeGuessedInput = Console.ReadLine();
-            int numberToBeGuessed;
-            Int32.TryParse(numberToBeGuessedInput, out numberToBeGuessed);
+            _ = int.TryParse(numberToBeGuessedInput, out int numberToBeGuessed);
 
             Console.WriteLine("User 2, guess the number.");
 
@@ -17,7 +16,7 @@ namespace csharp_players_guide.Challenges
             do
             {
                 proposedNumberInput = Console.ReadLine();
-                Int32.TryParse(proposedNumberInput, out proposedNumber);
+                _ = int.TryParse(proposedNumberInput, out proposedNumber);
 
                 if (numberToBeGuessed > proposedNumber)
                 {

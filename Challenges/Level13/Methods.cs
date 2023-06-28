@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace csharp_players_guide.Challenges
 {
-    public static class Level13
+    public static partial class Methods
     {
         // 100xp
         public static int AskForNumber(string text, int minRange = int.MinValue, int maxRange = int.MaxValue)
@@ -12,7 +12,7 @@ namespace csharp_players_guide.Challenges
                 Console.WriteLine(text);
                 string? input = Console.ReadLine();
 
-                if (!String.IsNullOrEmpty(input) && Regex.IsMatch(input, @"^\d+$"))
+                if (!string.IsNullOrEmpty(input) && MyRegex().IsMatch(input))
                 {
                     int number = Convert.ToInt32(input);
                     if (number > minRange && number < maxRange)
@@ -32,5 +32,7 @@ namespace csharp_players_guide.Challenges
             }
         }
 
+        [GeneratedRegex("^\\d+$")]
+        private static partial Regex MyRegex();
     }
 }
