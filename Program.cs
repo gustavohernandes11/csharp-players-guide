@@ -4,8 +4,10 @@ using csharp_players_guide.Challenges.Level24;
 using csharp_players_guide.Challenges.Level25;
 using csharp_players_guide.Challenges.Level26;
 using csharp_players_guide.Challenges.Level27;
-using csharp_players_guide.Challenges.Level28;
+// using csharp_players_guide.Challenges.Level28;
+using csharp_players_guide.Challenges.Level30;
 using csharp_players_guide.lib;
+using Level32;
 using static csharp_players_guide.Challenges.Arrow;
 
 
@@ -184,3 +186,21 @@ using static csharp_players_guide.Challenges.Arrow;
 // Console.WriteLine(original.ToString());
 // Console.WriteLine(woodVersion.ToString());
 // Console.WriteLine(woodVersionWithGem.ToString());
+
+
+// Sword sword = new();
+// ColoredItem<Sword> blueSword = new(sword, ConsoleColor.Blue);
+// blueSword.Display();
+
+// Axe axe = new();
+// ColoredItem<Axe> greenAxe = new(axe, ConsoleColor.Green);
+// greenAxe.Display();
+
+// Axe bow = new();
+// ColoredItem<Axe> redBow = new(bow, ConsoleColor.Red);
+// redBow.Display();
+
+
+
+MyTimer timer = new MyTimer();
+timer.Init();
