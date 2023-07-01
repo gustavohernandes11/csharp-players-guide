@@ -1,45 +1,44 @@
 using System.Text.RegularExpressions;
 
-namespace csharp_players_guide.lib
+namespace csharp_players_guide.lib;
+
+public class Helper
 {
-    public class Helper
+    public static bool IsValidEnumValue<TEnum>(string value) =>
+        Enum.TryParse(typeof(TEnum), value, true, out _);
+
+
+    public static int AskForNumber(string text, int minRange = int.MinValue, int maxRange = int.MaxValue)
     {
-        public static bool IsValidEnumValue<TEnum>(string value)
+        while (true)
         {
-            return Enum.TryParse(typeof(TEnum), value, true, out _);
-        }
+            Console.WriteLine(text);
+            string? input = Console.ReadLine();
 
-        public static int AskForNumber(string text, int minRange = int.MinValue, int maxRange = int.MaxValue)
-        {
-            while (true)
+            if (!String.IsNullOrEmpty(input) && Regex.IsMatch(input, @"^\d+$"))
             {
-                Console.WriteLine(text);
-                string? input = Console.ReadLine();
-
-                if (!String.IsNullOrEmpty(input) && Regex.IsMatch(input, @"^\d+$"))
+                int number = Convert.ToInt32(input);
+                if (number > minRange && number < maxRange)
                 {
-                    int number = Convert.ToInt32(input);
-                    if (number > minRange && number < maxRange)
-                    {
-                        return number;
-                    }
+                    return number;
                 }
-
             }
+
         }
-        public static string AskForString(string text)
+    }
+    public static string AskForString(string text)
+    {
+        while (true)
         {
-            while (true)
+            Console.WriteLine(text);
+            string? input = Console.ReadLine();
+
+            if (!String.IsNullOrEmpty(input))
             {
-                Console.WriteLine(text);
-                string? input = Console.ReadLine();
-
-                if (!String.IsNullOrEmpty(input))
-                {
-                    return input;
-                }
-
+                return input;
             }
+
         }
     }
 }
+
