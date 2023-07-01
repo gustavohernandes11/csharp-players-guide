@@ -23,9 +23,8 @@ public static class HuntingTheManticore
         round = 1;
         isGameRunning = true;
 
-
-
-        int manticoreDistance = Helper.AskForNumber("Player 1, how far away from the city do you want to station the Manticore (0 to 100)? ", 0, 100);
+        Random random = new();
+        int manticoreDistance = random.Next(0, 100) + 1;
 
         SoundEffect.Soundtrack(isGameRunning);
 
