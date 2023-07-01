@@ -7,26 +7,33 @@ public class Robot
     public int X { get; set; }
     public int Y { get; set; }
     public bool IsPowered { get; set; }
-    IRobotCommand?[] Commands { get; } = new IRobotCommand?[3];
+    List<IRobotCommand> Commands { get; } = new();
 
     public void Init()
     {
-        for (int i = 0; i < 3; i++)
+        Console.WriteLine("Available commands: on, off, north, south, east, west.");
+        Console.WriteLine("Use 'stop' to run all the commands inserted.");
+
+        while (true)
         {
-            string inputCommand = Helper.AskForString("insert one command: ");
+            string inputCommand = Helper.AskForString("insert command: ");
             if (Helper.IsValidEnumValue<ValidCommands>(inputCommand))
             {
                 Console.WriteLine("ok");
-                Commands[i] = GetCommand(inputCommand);
+                Commands.Add(GetCommand(inputCommand));
+            }
+            else if (inputCommand == "stop")
+            {
+                Run();
+                return;
             }
             else
             {
                 Console.WriteLine("command not registered");
-                i--;
             }
         }
 
-        Run();
+
     }
 
     static IRobotCommand GetCommand(string inputCommand)
@@ -45,9 +52,9 @@ public class Robot
 
     public void Run()
     {
-        foreach (IRobotCommand? command in Commands)
+        foreach (IRobotCommand command in Commands)
         {
-            command?.Run(this); Console.WriteLine($"[{X} {Y} {IsPowered}]");
+            command.Run(this); Console.WriteLine($"[{X} {Y} {IsPowered}]");
         }
     }
 }
