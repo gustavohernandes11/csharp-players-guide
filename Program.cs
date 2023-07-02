@@ -202,5 +202,17 @@ using static csharp_players_guide.Challenges.Arrow;
 
 
 
-MyTimer timer = new MyTimer();
-timer.Init();
+// MyTimer timer = new MyTimer();
+// timer.Init();
+
+
+
+
+using McDroidsPig = McDroids.Pig;
+using iFieldsPig = iFields.Pig;
+
+McDroidsPig pig1 = new();
+iFieldsPig pig2 = new();
+
+iFields.Sheep sheep = new();
+McDroids.Cow cow = new();
