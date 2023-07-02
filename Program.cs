@@ -5,9 +5,10 @@ using csharp_players_guide.Challenges.Level25;
 using csharp_players_guide.Challenges.Level26;
 using csharp_players_guide.Challenges.Level27;
 // using csharp_players_guide.Challenges.Level28;
-using csharp_players_guide.Challenges.Level30;
+using Level30;
 using csharp_players_guide.lib;
 using Level32;
+using Level35;
 using static csharp_players_guide.Challenges.Arrow;
 
 
@@ -206,13 +207,33 @@ using static csharp_players_guide.Challenges.Arrow;
 // timer.Init();
 
 
+// using McDroidsPig = McDroids.Pig;
+// using iFieldsPig = iFields.Pig;
+
+// McDroidsPig pig1 = new();
+// iFieldsPig pig2 = new();
+
+// iFields.Sheep sheep = new();
+// McDroids.Cow cow = new();
 
 
-using McDroidsPig = McDroids.Pig;
-using iFieldsPig = iFields.Pig;
 
-McDroidsPig pig1 = new();
-iFieldsPig pig2 = new();
+// Random rnd = new();
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine(rnd.NextString("a", "b", "c"));
+// }
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine(rnd.NextDouble(10));
+// }
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine(rnd.NextDouble(1000));
+// }
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine(rnd.CoinFlip(1));
+// }
 
-iFields.Sheep sheep = new();
-McDroids.Cow cow = new();
+ExeptisGame exeptisGame = new();
