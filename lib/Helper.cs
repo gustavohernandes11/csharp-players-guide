@@ -40,5 +40,28 @@ public class Helper
 
         }
     }
+    public static string AskForString(string text, int minLength, int maxLength)
+    {
+        while (true)
+        {
+            Console.WriteLine(text);
+            string? input = Console.ReadLine();
+
+            if (input?.Length > maxLength)
+                Console.WriteLine("Too long. Max length: " + minLength);
+
+            if (input?.Length < minLength)
+                Console.WriteLine("Too short. Min length: " + maxLength);
+
+
+            if (!String.IsNullOrEmpty(input)
+                && input.Length > minLength
+                && input.Length < maxLength)
+            {
+                return input;
+            }
+
+        }
+    }
 }
 
