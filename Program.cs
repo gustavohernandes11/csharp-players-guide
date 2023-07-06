@@ -12,6 +12,7 @@ using Level35;
 using Level36;
 using Level37;
 using Level39;
+using Level40;
 using static csharp_players_guide.Challenges.Arrow;
 
 
@@ -261,5 +262,9 @@ using static csharp_players_guide.Challenges.Arrow;
 
 
 
-LongGame game = new();
-game.Init();
+// LongGame game = new();
+// game.Init();
+
+
+PotionStand potionStand = new();
+potionStand.Init();
