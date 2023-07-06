@@ -11,6 +11,7 @@ using Level32;
 using Level35;
 using Level36;
 using Level37;
+using Level39;
 using static csharp_players_guide.Challenges.Arrow;
 
 
@@ -251,9 +252,14 @@ using static csharp_players_guide.Challenges.Arrow;
 // Sieve sieve = new();
 
 
-CharberryTree tree = new CharberryTree();
-Notifier notifier = new(tree);
-Harvester harvester = new(tree);
+// CharberryTree tree = new CharberryTree();
+// Notifier notifier = new(tree);
+// Harvester harvester = new(tree);
 
-while (true)
-    tree.MaybeGrow();
+// while (true)
+//     tree.MaybeGrow();
+
+
+
+LongGame game = new();
+game.Init();
