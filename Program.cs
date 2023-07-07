@@ -266,5 +266,23 @@ using static csharp_players_guide.Challenges.Arrow;
 // game.Init();
 
 
-PotionStand potionStand = new();
-potionStand.Init();
+// PotionStand potionStand = new();
+// potionStand.Init();
+
+
+BlockCoordinate coord1 = new(1, 3);
+BlockOffset offset = new(4, 3);
+
+BlockCoordinate coord2 = coord1 + offset;
+Console.WriteLine(coord2);
+
+coord2 += Direction.East;
+Console.WriteLine(coord2);
+coord2 += Direction.East;
+Console.WriteLine(coord2);
+coord2 += Direction.East;
+Console.WriteLine(coord2);
+
+
+Console.WriteLine(coord2[0]);
+Console.WriteLine(coord2[1]);
