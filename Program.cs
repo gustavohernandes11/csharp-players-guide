@@ -289,14 +289,26 @@ using static csharp_players_guide.Challenges.Arrow;
 // Console.WriteLine(coord2[1]);
 
 
-var procedural = ThreeLenses.Procedural(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
-var keywordbased = ThreeLenses.KeywordBased(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
-var methodcallbased = ThreeLenses.MethodCallBased(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+// var procedural = ThreeLenses.Procedural(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+// var keywordbased = ThreeLenses.KeywordBased(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+// var methodcallbased = ThreeLenses.MethodCallBased(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
 
-Console.WriteLine("procedural");
-foreach (var item in procedural) Console.WriteLine(item);
-Console.WriteLine("keywordbased");
-foreach (var item in keywordbased) Console.WriteLine(item);
-Console.WriteLine("methodcallbased");
-foreach (var item in methodcallbased) Console.WriteLine(item);
+// Console.WriteLine("procedural");
+// foreach (var item in procedural) Console.WriteLine(item);
+// Console.WriteLine("keywordbased");
+// foreach (var item in keywordbased) Console.WriteLine(item);
+// Console.WriteLine("methodcallbased");
+// foreach (var item in methodcallbased) Console.WriteLine(item);
 
+
+RecentNumbers recentNumbers = new();
+
+Thread generateNumbersThread = new(recentNumbers.GenerateNumbers);
+generateNumbersThread.Start();
+
+Console.WriteLine("Press any key when the two last numbers was equal.");
+while (true)
+{
+    Console.ReadKey();
+    Console.WriteLine(recentNumbers.IsEqualLastNumbers() ? "Great job!" : "[X] Not equal!");
+}
