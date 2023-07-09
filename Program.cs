@@ -13,6 +13,7 @@ using Level36;
 using Level37;
 using Level39;
 using Level40;
+using Level42;
 using static csharp_players_guide.Challenges.Arrow;
 
 
@@ -270,19 +271,32 @@ using static csharp_players_guide.Challenges.Arrow;
 // potionStand.Init();
 
 
-BlockCoordinate coord1 = new(1, 3);
-BlockOffset offset = new(4, 3);
+// BlockCoordinate coord1 = new(1, 3);
+// BlockOffset offset = new(4, 3);
 
-BlockCoordinate coord2 = coord1 + offset;
-Console.WriteLine(coord2);
+// BlockCoordinate coord2 = coord1 + offset;
+// Console.WriteLine(coord2);
 
-coord2 += Direction.East;
-Console.WriteLine(coord2);
-coord2 += Direction.East;
-Console.WriteLine(coord2);
-coord2 += Direction.East;
-Console.WriteLine(coord2);
+// coord2 += Direction.East;
+// Console.WriteLine(coord2);
+// coord2 += Direction.East;
+// Console.WriteLine(coord2);
+// coord2 += Direction.East;
+// Console.WriteLine(coord2);
 
 
-Console.WriteLine(coord2[0]);
-Console.WriteLine(coord2[1]);
+// Console.WriteLine(coord2[0]);
+// Console.WriteLine(coord2[1]);
+
+
+var procedural = ThreeLenses.Procedural(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+var keywordbased = ThreeLenses.KeywordBased(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+var methodcallbased = ThreeLenses.MethodCallBased(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+
+Console.WriteLine("procedural");
+foreach (var item in procedural) Console.WriteLine(item);
+Console.WriteLine("keywordbased");
+foreach (var item in keywordbased) Console.WriteLine(item);
+Console.WriteLine("methodcallbased");
+foreach (var item in methodcallbased) Console.WriteLine(item);
+
