@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Dynamic;
+using System.Linq;
 using csharp_players_guide.Challenges;
 using csharp_players_guide.Challenges.Level24;
 using csharp_players_guide.Challenges.Level25;
@@ -314,9 +315,18 @@ using static csharp_players_guide.Challenges.Arrow;
 // }
 
 
-RandomWords randomWords = new();
+
+// RandomWords randomWords = new();
 
 // randomWords.Init();
 // await randomWords.InitAsync();
-randomWords.InitAsyncMany();
+// randomWords.InitAsyncMany();
 
+
+Console.WriteLine(Adds.Add(1, 2));
+Console.WriteLine(Adds.Add(1.43, 23.2));
+Console.WriteLine(Adds.Add("Hello", " World!"));
+Console.WriteLine(Adds.Add(DateTime.UtcNow, TimeSpan.FromDays(2)));
+
+RobotFactory factory = new();
+factory.Init();
