@@ -4,7 +4,7 @@ using csharp_players_guide.Challenges.Level24;
 using csharp_players_guide.Challenges.Level25;
 using csharp_players_guide.Challenges.Level26;
 using csharp_players_guide.Challenges.Level27;
-// using csharp_players_guide.Challenges.Level28;
+using csharp_players_guide.Challenges.Level28;
 using csharp_players_guide.Challenges.Level30;
 using csharp_players_guide.lib;
 using Level32;
@@ -301,14 +301,22 @@ using static csharp_players_guide.Challenges.Arrow;
 // foreach (var item in methodcallbased) Console.WriteLine(item);
 
 
-RecentNumbers recentNumbers = new();
+// RecentNumbers recentNumbers = new();
 
-Thread generateNumbersThread = new(recentNumbers.GenerateNumbers);
-generateNumbersThread.Start();
+// Thread generateNumbersThread = new(recentNumbers.GenerateNumbers);
+// generateNumbersThread.Start();
 
-Console.WriteLine("Press any key when the two last numbers was equal.");
-while (true)
-{
-    Console.ReadKey();
-    Console.WriteLine(recentNumbers.IsEqualLastNumbers() ? "Great job!" : "[X] Not equal!");
-}
+// Console.WriteLine("Press any key when the two last numbers was equal.");
+// while (true)
+// {
+//     Console.ReadKey();
+//     Console.WriteLine(recentNumbers.IsEqualLastNumbers() ? "Great job!" : "[X] Not equal!");
+// }
+
+
+RandomWords randomWords = new();
+
+// randomWords.Init();
+// await randomWords.InitAsync();
+randomWords.InitAsyncMany();
+
