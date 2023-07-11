@@ -40,7 +40,7 @@ public class Helper
 
         }
     }
-    public static string AskForString(string text, int minLength, int maxLength)
+    public static string AskForString(string text, int minLength = 1, int maxLength = 100)
     {
         while (true)
         {
