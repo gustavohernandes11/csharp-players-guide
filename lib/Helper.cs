@@ -48,10 +48,10 @@ public class Helper
             string? input = Console.ReadLine();
 
             if (input?.Length > maxLength)
-                Console.WriteLine("Too long. Max length: " + minLength);
+                Console.WriteLine("Too long. Max length: " + maxLength);
 
             if (input?.Length < minLength)
-                Console.WriteLine("Too short. Min length: " + maxLength);
+                Console.WriteLine("Too short. Min length: " + minLength);
 
 
             if (!String.IsNullOrEmpty(input)
