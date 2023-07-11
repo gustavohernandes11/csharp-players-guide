@@ -63,5 +63,17 @@ public class Helper
 
         }
     }
+
+    public static bool AskForBool(string text)
+    {
+        while (true)
+        {
+            Console.WriteLine(text + " (yes/no)");
+            string? input = Console.ReadLine()?.Trim().ToLower();
+
+            if (input == "yes" || input == "y") return true;
+            if (input == "no" || input == "n") return false;
+        }
+    }
 }
 
