@@ -51,7 +51,7 @@ public record RandomWords
         stopwatch.Stop();
         long elapsed = stopwatch.ElapsedMilliseconds;
 
-        Console.WriteLine($"word: {word} | attemps: {attemps} | elapsed: {elapsed}");
+        Console.WriteLine($"word: {word} | attemps: {attemps} | elapsed: {elapsed} ms");
 
         return attemps;
     }
